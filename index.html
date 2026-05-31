@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Teste IPTV Direito — A TV reinventada. Sem travar. Sem mensalidade abusiva.</title>
+<meta name="description" content="Mais de 120.000 canais, filmes e séries em 4K. Teste grátis por 6 horas. Funciona em qualquer dispositivo. Suporte humano 24/7." />
+<meta name="keywords" content="iptv, iptv 4k, iptv premium, lista iptv, melhor iptv brasil, iptv barato, teste iptv gratis" />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="IPTV Perfeito" />
+<meta name="theme-color" content="#f4efe6" />
+
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:title" content="IPTV Direito — A TV reinventada" />
+<meta property="og:description" content="120.000+ canais em 4K. Teste grátis por 6h. Sem travar." />
+<meta property="og:url" content="https://iptvperfeito.com/" />
+<meta property="og:site_name" content="IPTV Direito" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="IPTV Direito — A TV reinventada" />
+<meta name="twitter:description" content="120.000+ canais em 4K. Teste grátis por 6h." />
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Product",
+  "name":"IPTV Direito",
+  "description":"Serviço de IPTV com mais de 120.000 canais, filmes e séries em 4K.",
+  "brand":{"@type":"Brand","name":"IPTV Direito"},
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"8421"},
+  "offers":{"@type":"AggregateOffer","priceCurrency":"BRL","lowPrice":"29.90","highPrice":"249.90"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Como funciona o teste grátis?","acceptedAnswer":{"@type":"Answer","text":"Você libera 6 horas de acesso completo sem cartão de crédito."}},
+    {"@type":"Question","name":"Funciona na minha TV?","acceptedAnswer":{"@type":"Answer","text":"Sim. Funciona em Smart TV, Android, iOS, Fire Stick, computador e TV Box."}},
+    {"@type":"Question","name":"Trava no horário nobre?","acceptedAnswer":{"@type":"Answer","text":"Não. Servidores dedicados com balanceamento garantem estabilidade 24/7."}}
+  ]
+}
+</script>
+
+<style>
+/* ============================================
+   IPTV PERFEITO — EDITORIAL / NEO-BRUTAL
+   ============================================ */
+:root{
+  --paper:#f4efe6;
+  --paper-2:#ebe4d4;
+  --ink:#0e0e0c;
+  --ink-soft:#2a2a26;
+  --accent:#ff3b1f;       /* electric vermilion */
+  --accent-2:#ffd23f;     /* sun yellow */
+  --lime:#c6ff3a;
+  --rule:#0e0e0c;
+  --maxw:1280px;
+  --serif:'Times New Roman', Times, Georgia, serif;
+  --sans: ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--sans);
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.4;
+  overflow-x:hidden;
+  font-feature-settings:"ss01","ss02";
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+
+/* Grain overlay */
+body::before{
+  content:"";
+  position:fixed;inset:0;
+  pointer-events:none;z-index:1000;
+  opacity:.05;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>");
+}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+/* ===== TICKER ===== */
+.ticker{
+  background:var(--ink);color:var(--paper);
+  border-bottom:2px solid var(--ink);
+  overflow:hidden;font-family:var(--mono);
+  font-size:13px;letter-spacing:.04em;text-transform:uppercase;
+  padding:10px 0;position:relative;z-index:50;
+}
+.ticker-track{display:flex;gap:48px;white-space:nowrap;animation:scroll 40s linear infinite;width:max-content}
+.ticker span{display:inline-flex;align-items:center;gap:12px}
+.ticker .dot{width:6px;height:6px;background:var(--accent);border-radius:50%}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ===== NAV ===== */
+nav.top{
+  position:sticky;top:0;z-index:40;
+  background:var(--paper);
+  border-bottom:1.5px solid var(--ink);
+}
+.nav-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px 24px;max-width:var(--maxw);margin:0 auto;
+}
+.logo{
+  font-family:var(--serif);font-weight:700;font-style:italic;
+  font-size:28px;letter-spacing:-.02em;display:flex;align-items:center;gap:10px;
+}
+.logo-mark{
+  width:34px;height:34px;background:var(--accent);
+  display:grid;place-items:center;color:var(--paper);
+  font-family:var(--mono);font-weight:700;font-style:normal;font-size:14px;
+  transform:rotate(-4deg);border:1.5px solid var(--ink);
+}
+.nav-links{display:flex;gap:32px;font-size:14px;text-transform:uppercase;letter-spacing:.08em}
+.nav-links a{position:relative;padding:4px 0}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{
+  background:var(--ink);color:var(--paper);padding:12px 22px;
+  font-size:13px;text-transform:uppercase;letter-spacing:.1em;font-weight:600;
+  border:1.5px solid var(--ink);transition:all .2s;
+  display:inline-flex;align-items:center;gap:8px;
+}
+.nav-cta:hover{background:var(--accent);transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--ink)}
+.nav-cta::after{content:"→";font-family:var(--mono)}
+@media(max-width:880px){.nav-links{display:none}}
+
+/* ===== HERO ===== */
+.hero{
+  padding:60px 0 100px;border-bottom:1.5px solid var(--ink);
+  position:relative;overflow:hidden;
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.4fr 1fr;gap:60px;align-items:end;
+}
+.eyebrow{
+  font-family:var(--mono);font-size:12px;letter-spacing:.2em;
+  text-transform:uppercase;display:flex;align-items:center;gap:14px;margin-bottom:28px;
+}
+.eyebrow::before{content:"";width:42px;height:1.5px;background:var(--ink)}
+.eyebrow b{color:var(--accent);font-weight:600}
+
+h1.hero-title{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(56px,9vw,148px);line-height:.92;letter-spacing:-.04em;
+  margin-bottom:36px;
+}
+h1.hero-title em{font-style:italic;color:var(--accent);font-weight:400}
+h1.hero-title .strike{text-decoration:line-through;text-decoration-thickness:6px;color:var(--ink-soft);opacity:.55}
+h1.hero-title .underline-hand{
+  position:relative;display:inline-block;
+}
+h1.hero-title .underline-hand::after{
+  content:"";position:absolute;left:-4px;right:-4px;bottom:6px;height:14px;
+  background:var(--accent-2);z-index:-1;transform:skewX(-8deg);
+}
+
+.hero-lede{
+  font-size:19px;line-height:1.55;max-width:48ch;margin-bottom:40px;color:var(--ink-soft);
+}
+
+.cta-row{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.btn{
+  display:inline-flex;align-items:center;gap:12px;
+  padding:18px 28px;font-size:14px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.1em;
+  border:1.5px solid var(--ink);transition:all .18s ease;
+  font-family:var(--sans);
+}
+.btn-primary{background:var(--accent);color:var(--paper);box-shadow:6px 6px 0 var(--ink)}
+.btn-primary:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--ink);background:#ff5a3f}
+.btn-ghost{background:transparent;color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--paper)}
+.btn .arr{font-family:var(--mono);font-size:18px}
+
+/* hero right column — info card */
+.hero-card{
+  background:var(--ink);color:var(--paper);
+  padding:32px;border:1.5px solid var(--ink);
+  box-shadow:10px 10px 0 var(--accent);
+  position:relative;
+}
+.hero-card-label{
+  font-family:var(--mono);font-size:11px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--accent-2);margin-bottom:18px;
+}
+.hero-card h3{
+  font-family:var(--serif);font-size:32px;font-weight:400;line-height:1.1;margin-bottom:22px;
+}
+.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:24px;padding-top:24px;border-top:1px solid #ffffff20}
+.hero-stats div b{font-family:var(--serif);font-size:42px;display:block;line-height:1;letter-spacing:-.02em}
+.hero-stats div span{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#ffffffaa}
+
+@media(max-width:880px){
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .hero{padding:40px 0 60px}
+}
+
+/* ===== MARQUEE BANNER ===== */
+.marquee{
+  background:var(--accent);color:var(--paper);
+  border-bottom:1.5px solid var(--ink);
+  padding:22px 0;overflow:hidden;
+}
+.marquee-track{
+  display:flex;gap:60px;white-space:nowrap;animation:scroll 30s linear infinite;
+  font-family:var(--serif);font-size:42px;font-style:italic;letter-spacing:-.02em;
+  width:max-content;
+}
+.marquee-track span{display:inline-flex;align-items:center;gap:60px}
+.marquee-track .star{font-style:normal;font-size:28px}
+
+/* ===== NUMBERED SECTION ===== */
+.section{padding:120px 0;border-bottom:1.5px solid var(--ink);position:relative}
+.section-head{display:grid;grid-template-columns:auto 1fr;gap:40px;margin-bottom:80px;align-items:start}
+.section-num{
+  font-family:var(--mono);font-size:14px;letter-spacing:.15em;
+}
+.section-title{
+  font-family:var(--serif);font-weight:400;font-size:clamp(40px,5.5vw,76px);
+  line-height:1;letter-spacing:-.03em;max-width:18ch;
+}
+.section-title em{font-style:italic;color:var(--accent)}
+
+/* ===== BENEFITS GRID ===== */
+.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1.5px solid var(--ink)}
+.benefit{
+  padding:36px 28px;border-right:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);
+  background:var(--paper);transition:background .25s;
+  position:relative;
+}
+.benefit:nth-child(3n){border-right:0}
+.benefit:hover{background:var(--paper-2)}
+.benefit-num{font-family:var(--mono);font-size:12px;color:var(--ink-soft);margin-bottom:30px}
+.benefit-ico{
+  width:56px;height:56px;border:1.5px solid var(--ink);
+  display:grid;place-items:center;margin-bottom:22px;background:var(--paper-2);
+}
+.benefit-ico svg{width:28px;height:28px;stroke:var(--ink);stroke-width:1.8;fill:none}
+.benefit h3{font-family:var(--serif);font-size:26px;font-weight:400;line-height:1.15;margin-bottom:12px;letter-spacing:-.01em}
+.benefit p{font-size:15px;color:var(--ink-soft);line-height:1.5}
+@media(max-width:880px){
+  .benefits{grid-template-columns:1fr}
+  .benefit{border-right:0!important}
+}
+
+/* ===== PLANS — Editorial pricing ===== */
+.plans-wrap{background:var(--ink);color:var(--paper);padding:120px 0;border-bottom:1.5px solid var(--ink)}
+.plans-wrap .section-title{color:var(--paper)}
+.plans-wrap .section-num{color:var(--accent-2)}
+.plans-wrap .section-title em{color:var(--accent-2)}
+
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1.5px solid var(--paper)}
+.plan{
+  padding:40px 32px;border-right:1.5px solid var(--paper);position:relative;
+  display:flex;flex-direction:column;min-height:580px;background:var(--ink);
+  transition:background .25s;
+}
+.plan:last-child{border-right:0}
+.plan:hover{background:#1a1a17}
+.plan.featured{background:var(--accent);color:var(--paper)}
+.plan.featured:hover{background:#ff5a3f}
+.plan-tag{
+  font-family:var(--mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;
+  display:inline-block;padding:6px 10px;border:1px solid currentColor;margin-bottom:30px;align-self:flex-start;
+}
+.plan.featured .plan-tag{background:var(--ink);color:var(--accent-2);border-color:var(--ink)}
+.plan-name{font-family:var(--serif);font-size:36px;font-weight:400;line-height:1;margin-bottom:8px;letter-spacing:-.02em}
+.plan-sub{font-size:13px;opacity:.7;margin-bottom:32px;font-family:var(--mono);letter-spacing:.05em}
+.plan-price{margin-bottom:28px}
+.plan-price b{font-family:var(--serif);font-size:78px;font-weight:400;line-height:1;letter-spacing:-.04em;display:inline-block}
+.plan-price small{font-family:var(--mono);font-size:13px;opacity:.7;margin-left:4px}
+.plan-price .from{display:block;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:6px;opacity:.6}
+.plan ul{list-style:none;margin-bottom:32px;flex:1}
+.plan ul li{
+  padding:12px 0;border-bottom:1px solid #ffffff20;
+  font-size:14px;display:flex;gap:12px;align-items:flex-start;
+}
+.plan.featured ul li{border-bottom-color:#00000020}
+.plan ul li::before{content:"+";font-family:var(--mono);color:var(--accent-2);font-weight:700}
+.plan.featured ul li::before{color:var(--ink)}
+.plan .btn{width:100%;justify-content:center;background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.plan .btn:hover{background:var(--accent-2);border-color:var(--accent-2);color:var(--ink)}
+.plan.featured .btn{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.plan.featured .btn:hover{background:var(--accent-2);color:var(--ink);border-color:var(--accent-2)}
+@media(max-width:880px){
+  .plans{grid-template-columns:1fr}
+  .plan{border-right:0;border-bottom:1.5px solid var(--paper);min-height:auto}
+  .plan:last-child{border-bottom:0}
+}
+
+/* ===== DEVICES — asymmetric ===== */
+.devices{display:grid;grid-template-columns:repeat(6,1fr);gap:0;border-top:1.5px solid var(--ink)}
+.device{
+  padding:30px 20px;border-right:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);
+  text-align:center;background:var(--paper);transition:all .2s;
+}
+.device:last-child{border-right:0}
+.device:hover{background:var(--lime)}
+.device svg{width:42px;height:42px;margin:0 auto 14px;stroke:var(--ink);stroke-width:1.5;fill:none}
+.device h4{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+@media(max-width:880px){.devices{grid-template-columns:repeat(2,1fr)}.device:nth-child(2n){border-right:0}}
+
+/* ===== HOW IT WORKS — Editorial steps ===== */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1.5px solid var(--ink)}
+.step{
+  padding:40px 28px;border-right:1.5px solid var(--ink);position:relative;
+  background:var(--paper);
+}
+.step:last-child{border-right:0}
+.step-num{
+  font-family:var(--serif);font-size:120px;line-height:1;font-style:italic;
+  color:var(--accent);letter-spacing:-.05em;margin-bottom:20px;display:block;
+}
+.step h4{font-family:var(--serif);font-size:24px;font-weight:400;margin-bottom:10px;line-height:1.15}
+.step p{font-size:14px;color:var(--ink-soft);line-height:1.5}
+@media(max-width:880px){.steps{grid-template-columns:1fr}.step{border-right:0;border-bottom:1.5px solid var(--ink)}.step:last-child{border-bottom:0}}
+
+/* ===== TESTIMONIALS — Magazine quotes ===== */
+.quotes-wrap{background:var(--paper-2);padding:120px 0;border-bottom:1.5px solid var(--ink)}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1.5px solid var(--ink);border-left:1.5px solid var(--ink)}
+.quote{
+  padding:36px 28px;border-right:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);
+  background:var(--paper);display:flex;flex-direction:column;
+}
+.quote .mark{font-family:var(--serif);font-size:80px;line-height:.5;color:var(--accent);margin-bottom:30px;height:30px}
+.quote p{font-family:var(--serif);font-size:20px;line-height:1.35;margin-bottom:24px;flex:1}
+.quote .by{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.1em}
+.quote .by b{display:block;font-family:var(--sans);font-weight:700;text-transform:none;letter-spacing:0;font-size:14px;margin-bottom:2px}
+.quote .stars{color:var(--accent);font-size:14px;margin-bottom:14px;letter-spacing:2px}
+@media(max-width:880px){.quotes{grid-template-columns:1fr}}
+
+/* ===== FAQ ===== */
+.faq{max-width:920px;margin:0 auto}
+.faq-item{border-top:1.5px solid var(--ink);padding:0}
+.faq-item:last-child{border-bottom:1.5px solid var(--ink)}
+.faq-q{
+  width:100%;text-align:left;padding:28px 0;
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+  font-family:var(--serif);font-size:clamp(22px,2.4vw,32px);font-weight:400;line-height:1.2;letter-spacing:-.01em;
+  transition:color .2s;
+}
+.faq-q:hover{color:var(--accent)}
+.faq-q .plus{
+  flex-shrink:0;width:44px;height:44px;border:1.5px solid var(--ink);
+  display:grid;place-items:center;font-family:var(--mono);font-size:22px;
+  transition:all .25s;font-weight:300;
+}
+.faq-item.open .plus{background:var(--accent);color:var(--paper);transform:rotate(135deg);border-color:var(--accent)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a-inner{padding:0 0 32px;font-size:17px;line-height:1.6;color:var(--ink-soft);max-width:62ch}
+
+/* ===== FINAL CTA ===== */
+.final{
+  background:var(--accent);color:var(--paper);
+  padding:140px 0;text-align:center;border-bottom:1.5px solid var(--ink);
+  position:relative;overflow:hidden;
+}
+.final h2{
+  font-family:var(--serif);font-weight:400;font-size:clamp(48px,8vw,120px);
+  line-height:.95;letter-spacing:-.04em;margin-bottom:30px;
+}
+.final h2 em{font-style:italic}
+.final p{font-size:20px;max-width:50ch;margin:0 auto 44px;opacity:.95}
+.final .btn{background:var(--paper);color:var(--ink);border-color:var(--paper);font-size:16px;padding:22px 36px;box-shadow:8px 8px 0 var(--ink)}
+.final .btn:hover{transform:translate(-4px,-4px);box-shadow:12px 12px 0 var(--ink);background:var(--accent-2);border-color:var(--accent-2)}
+
+/* ===== FOOTER ===== */
+footer{background:var(--ink);color:var(--paper);padding:80px 0 30px}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:60px}
+.foot-brand h3{font-family:var(--serif);font-size:42px;font-style:italic;font-weight:400;margin-bottom:18px;letter-spacing:-.02em}
+.foot-brand p{font-size:14px;opacity:.7;line-height:1.6;max-width:38ch}
+.foot-col h5{font-family:var(--mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--accent-2);margin-bottom:20px}
+.foot-col a{display:block;padding:6px 0;font-size:14px;opacity:.8;transition:opacity .2s}
+.foot-col a:hover{opacity:1;color:var(--accent-2)}
+.foot-bottom{
+  padding-top:30px;border-top:1px solid #ffffff20;
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;
+  font-family:var(--mono);font-size:12px;opacity:.6;letter-spacing:.05em;
+}
+@media(max-width:880px){.foot-grid{grid-template-columns:1fr;gap:36px}}
+
+/* ===== FLOAT WPP ===== */
+.wpp{
+  position:fixed;bottom:24px;right:24px;z-index:60;
+  width:64px;height:64px;background:#25d366;border:2px solid var(--ink);
+  border-radius:50%;display:grid;place-items:center;
+  box-shadow:5px 5px 0 var(--ink);transition:transform .2s;
+}
+.wpp:hover{transform:translate(-2px,-2px)}
+.wpp svg{width:32px;height:32px;fill:var(--paper)}
+
+/* reveal anim */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span><i class="dot"></i> 120.000+ canais ao vivo</span>
+    <span><i class="dot"></i> Filmes & séries em 4K UHD</span>
+    <span><i class="dot"></i> Teste grátis 6 horas</span>
+    <span><i class="dot"></i> Suporte 24/7 via WhatsApp</span>
+    <span><i class="dot"></i> Sem fidelidade · cancele quando quiser</span>
+    <span><i class="dot"></i> 120.000+ canais ao vivo</span>
+    <span><i class="dot"></i> Filmes & séries em 4K UHD</span>
+    <span><i class="dot"></i> Teste grátis 6 horas</span>
+    <span><i class="dot"></i> Suporte 24/7 via WhatsApp</span>
+    <span><i class="dot"></i> Sem fidelidade · cancele quando quiser</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="top">
+  <div class="nav-inner">
+    <a href="#" class="logo"><span class="logo-mark">IP</span>iptv<em>perfeito</em></a>
+    <div class="nav-links">
+      <a href="#beneficios">Vantagens</a>
+      <a href="#planos">Planos</a>
+      <a href="#dispositivos">Dispositivos</a>
+      <a href="#duvidas">Dúvidas</a>
+    </div>
+    <a class="nav-cta" href="https://iptvperfeito.com/menu" target="_blank" rel="nofollow noopener noreferrer">Testar grátis</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow"><b>EDIÇÃO 2026</b> · A nova era da televisão por internet</div>
+        <h1 class="hero-title">
+          A TV <em>como deveria</em><br>
+          <span class="strike">ser caríssima</span><br>
+          <span class="underline-hand">sempre foi.</span>
+        </h1>
+        <p class="hero-lede">
+          Cansado de assinatura que dobra de preço, controle que não pega e Globoplay com 8 senhas?
+          Aqui é simples: <b>um app, tudo dentro</b>. Canais ao vivo, filmes em estreia, séries completas e esportes em 4K — sem travar, sem cadastro chato, sem letra miúda.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://iptvperfeito.com/menu" target="_blank" rel="nofollow noopener noreferrer">Liberar teste grátis <span class="arr">→</span></a>
+          <a class="btn btn-ghost" href="#planos">Ver planos</a>
+        </div>
+      </div>
+
+      <aside class="hero-card reveal">
+        <div class="hero-card-label">↳ Status do servidor · ao vivo</div>
+        <h3>"Online há 1.847 dias sem queda no horário nobre."</h3>
+        <div class="hero-stats">
+          <div><b id="s1">120k+</b><span>Canais & VOD</span></div>
+          <div><b id="s2">4K</b><span>Qualidade máxima</span></div>
+          <div><b id="s3">99.9%</b><span>Uptime garantido</span></div>
+          <div><b id="s4">24/7</b><span>Suporte humano</span></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</header>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Sem travar <i class="star">✦</i> Sem propaganda <i class="star">✦</i> Sem mensalidade abusiva <i class="star">✦</i> Sem fidelidade <i class="star">✦</i></span>
+    <span>Sem travar <i class="star">✦</i> Sem propaganda <i class="star">✦</i> Sem mensalidade abusiva <i class="star">✦</i> Sem fidelidade <i class="star">✦</i></span>
+  </div>
+</div>
+
+<!-- BENEFITS -->
+<section class="section" id="beneficios">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-num">[ 01 / VANTAGENS ]</div>
+      <h2 class="section-title">Por que mais de <em>50 mil famílias</em> trocaram a TV paga por aqui.</h2>
+    </div>
+
+    <div class="benefits">
+      <div class="benefit reveal">
+        <div class="benefit-num">A.01</div>
+        <div class="benefit-ico"><svg viewBox="0 0 24 24"><path d="M3 12h3l3-9 6 18 3-9h3"/></svg></div>
+        <h3>Estabilidade obsessiva</h3>
+        <p>Servidores dedicados com balanceamento automático. Quinta de Champions sem aquele "carregando..." no melhor momento.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="benefit-num">A.02</div>
+        <div class="benefit-ico"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="1"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <h3>Resolução até 4K UHD</h3>
+        <p>Cinema, novela, futebol e documentário em qualidade máxima. Áudio multicanal e legendas opcionais.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="benefit-num">A.03</div>
+        <div class="benefit-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>Lançamentos no mesmo dia</h3>
+        <p>Catálogo atualizado diariamente com filmes em cartaz, séries do dia e temporadas completas dubladas.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="benefit-num">A.04</div>
+        <div class="benefit-ico"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8z"/></svg></div>
+        <h3>Suporte que responde</h3>
+        <p>Gente de verdade no WhatsApp em até 2 minutos. Sem bot, sem URA, sem "abra um ticket no portal".</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="benefit-num">A.05</div>
+        <div class="benefit-ico"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Sem fidelidade</h3>
+        <p>Não precisou? Cancela. Sem ligação de telemarketing pra te convencer a ficar mais 12 meses.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="benefit-num">A.06</div>
+        <div class="benefit-ico"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        <h3>Ativação em 5 minutos</h3>
+        <p>Pagou, recebeu o acesso, abriu o app. Tutorial passo a passo pra qualquer dispositivo. Funciona na primeira tentativa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANS -->
+<section class="plans-wrap" id="planos">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-num">[ 02 / PLANOS ]</div>
+      <h2 class="section-title">Pague menos que um <em>delivery</em>. Assista por um mês inteiro.</h2>
+    </div>
+
+    <div class="plans">
+      <div class="plan reveal">
+        <span class="plan-tag">Mensal</span>
+        <div class="plan-name">Começar</div>
+        <div class="plan-sub">// 30 dias de acesso</div>
+        <div class="plan-price">
+          <span class="from">A partir de</span>
+          <b>R$29</b><small>,90/mês</small>
+        </div>
+        <ul>
+          <li>Acesso completo ao catálogo</li>
+          <li>Resolução até 4K UHD</li>
+          <li>2 telas simultâneas</li>
+          <li>Suporte via WhatsApp</li>
+          <li>Renovação opcional</li>
+        </ul>
+        <a class="btn" href="https://iptvperfeito.com/menu" target="_blank" rel="nofollow noopener noreferrer">Assinar mensal →</a>
+      </div>
+
+      <div class="plan featured reveal">
+        <span class="plan-tag">★ Mais escolhido</span>
+        <div class="plan-name">Semestral</div>
+        <div class="plan-sub">// 6 meses · economia de 40%</div>
+        <div class="plan-price">
+          <span class="from">Equivale a</span>
+          <b>R$17</b><small>,90/mês</small>
+        </div>
+        <ul>
+          <li>Tudo do plano mensal</li>
+          <li>3 telas simultâneas</li>
+          <li>Lista personalizada de favoritos</li>
+          <li>Prioridade no suporte</li>
+          <li>Bônus: 1 mês extra grátis</li>
+          <li>Trava de preço por 6 meses</li>
+        </ul>
+        <a class="btn" href="https://iptvperfeito.com/menu" target="_blank" rel="nofollow noopener noreferrer">Assinar semestral →</a>
+      </div>
+
+      <div class="plan reveal">
+        <span class="plan-tag">Anual</span>
+        <div class="plan-name">Família</div>
+        <div class="plan-sub">// 12 meses · economia máxima</div>
+        <div class="plan-price">
+          <span class="from">Equivale a</span>
+          <b>R$13</b><small>,90/mês</small>
+        </div>
+        <ul>
+          <li>Tudo dos planos anteriores</li>
+          <li>4 telas simultâneas</li>
+          <li>Servidor premium dedicado</li>
+          <li>Atendimento VIP 24/7</li>
+          <li>Bônus: 2 meses extras grátis</li>
+          <li>Garantia de reembolso 7 dias</li>
+        </ul>
+        <a class="btn" href="https://iptvperfeito.com/menu" target="_blank" rel="nofollow noopener noreferrer">Assinar anual →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEVICES -->
+<section class="section" id="dispositivos">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-num">[ 03 / COMPATIBILIDADE ]</div>
+      <h2 class="section-title">Já tem o aparelho. Falta só <em>abrir o app</em>.</h2>
+    </div>
+    <div class="devices">
+      <div class="device reveal"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="14" rx="1"/><path d="M8 21h8"/></svg><h4>Smart TV</h4></div>
+      <div class="device reveal"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg><h4>Android</h4></div>
+      <div class="device reveal"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M12 18h.01"/></svg><h4>iOS</h4></div>
+      <div class="device reveal"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="13" rx="1"/><path d="M2 20h20"/></svg><h4>PC / Mac</h4></div>
+      <div class="device reveal"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="8" cy="12" r="1.5"/><circle cx="16" cy="12" r="1.5"/></svg><h4>TV Box</h4></div>
+      <div class="device reveal"><svg viewBox="0 0 24 24"><path d="M4 7h16v10H4z"/><path d="M9 21h6M12 17v4"/></svg><h4>Fire Stick</h4></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-num">[ 04 / COMO FUNCIONA ]</div>
+      <h2 class="section-title">Em <em>5 minutos</em> você está assistindo. Sem exagero.</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><span class="step-num">01</span><h4>Escolha um plano</h4><p>Selecione mensal, semestral ou anual no link de pagamento.</p></div>
+      <div class="step reveal"><span class="step-num">02</span><h4>Pague pelo Pix</h4><p>Aprovação instantânea. Cartão e boleto também disponíveis.</p></div>
+      <div class="step reveal"><span class="step-num">03</span><h4>Receba o acesso</h4><p>Login, senha e tutorial chegam no seu WhatsApp em segundos.</p></div>
+      <div class="step reveal"><span class="step-num">04</span><h4>Abra e assista</h4><p>Configure no app em 1 minuto. Pronto: mais de 120 mil títulos.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="quotes-wrap">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-num">[ 05 / OPINIÃO PÚBLICA ]</div>
+      <h2 class="section-title">8.421 famílias avaliaram com <em>5 estrelas</em>.</h2>
+    </div>
+    <div class="quotes">
+      <div class="quote reveal">
+        <div class="mark">"</div>
+        <div class="stars">★★★★★</div>
+        <p>Cancelei a NET, a Globoplay e o Prime no mesmo dia. Pago menos que um lanche e tenho 20x mais coisa pra assistir.</p>
+        <div class="by"><b>Marcelo R.</b>Cliente há 2 anos · Curitiba</div>
+      </div>
+      <div class="quote reveal">
+        <div class="mark">"</div>
+        <div class="stars">★★★★★</div>
+        <p>Comprei pra meu pai (72 anos) e ele aprendeu sozinho. Não trava nem na novela das 9, nem no Flamengo.</p>
+        <div class="by"><b>Juliana M.</b>Cliente há 8 meses · Recife</div>
+      </div>
+      <div class="quote reveal">
+        <div class="mark">"</div>
+        <div class="stars">★★★★★</div>
+        <p>Tive um problema às 23h de domingo. Mandei mensagem e resolveram em 4 minutos. Suporte de verdade é raro.</p>
+        <div class="by"><b>Anderson P.</b>Cliente há 1 ano · São Paulo</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="duvidas">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-num">[ 06 / DÚVIDAS ]</div>
+      <h2 class="section-title">Antes de comprar, talvez <em>você queira saber.</em></h2>
+    </div>
+    <div class="faq">
+      <div class="faq-item">
+        <button class="faq-q">É legalizado e seguro?<span class="plus">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Sim. Trabalhamos com tecnologia de transmissão licenciada e suas informações ficam protegidas. Não compartilhamos dados com terceiros.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Como funciona o teste grátis?<span class="plus">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Você libera 6 horas de acesso completo, sem precisar de cartão de crédito. Basta clicar em "Testar grátis" e seguir as instruções no WhatsApp.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Vai travar no horário nobre?<span class="plus">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Não. Nossos servidores têm balanceamento de carga automático. Mesmo em jogos do Brasil ou finais de novela, o sinal é estável.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Funciona na minha TV antiga?<span class="plus">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Se sua TV não for Smart, basta usar um TV Box ou Fire Stick (a partir de R$ 200). Nossa equipe te orienta na compra do aparelho ideal.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Posso assistir em mais de uma tela?<span class="plus">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Sim. O plano mensal libera 2 telas simultâneas; semestral 3 telas; anual 4 telas. Cada pessoa da família assiste o que quiser.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Quais formas de pagamento?<span class="plus">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Pix (aprovação instantânea), cartão de crédito em até 12x e boleto bancário. Tudo via gateway seguro.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Posso cancelar quando quiser?<span class="plus">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Sim. Não há fidelidade. Se não renovar, o acesso simplesmente expira no fim do período contratado. Sem multa, sem ligação.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="wrap">
+    <h2>Sua TV merece <em>um upgrade.</em></h2>
+    <p>Libere 6 horas de teste grátis agora mesmo. Sem cartão. Sem compromisso. Sem ladainha.</p>
+    <a class="btn" href="https://iptvperfeito.com/menu" target="_blank" rel="nofollow noopener noreferrer">Quero testar agora <span class="arr">→</span></a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <h3>iptv<em>perfeito</em>.</h3>
+        <p>A TV reinventada para quem cansou de pagar caro por pouco. Tecnologia, catálogo e suporte de verdade — sem letra miúda.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Navegação</h5>
+        <a href="#beneficios">Vantagens</a>
+        <a href="#planos">Planos</a>
+        <a href="#dispositivos">Dispositivos</a>
+        <a href="#duvidas">Dúvidas</a>
+      </div>
+      <div class="foot-col">
+        <h5>Serviço</h5>
+        <a href="https://iptvperfeito.com/menu" target="_blank" rel="nofollow noopener noreferrer">Assinar agora</a>
+        <a href="https://iptvperfeito.com/menu" target="_blank" rel="nofollow noopener noreferrer">Teste grátis</a>
+        <a href="https://iptvperfeito.com/menu" target="_blank" rel="nofollow noopener noreferrer">Suporte 24/7</a>
+      </div>
+      <div class="foot-col">
+        <h5>Legal</h5>
+        <a href="#">Termos de uso</a>
+        <a href="#">Política de privacidade</a>
+        <a href="#">Política de reembolso</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 IPTV PERFEITO · Todos os direitos reservados</span>
+      <span>Feito com obsessão por imagem nítida ✦</span>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a class="wpp" href="https://iptvperfeito.com/menu" target="_blank" rel="nofollow noopener noreferrer" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.7 5.5 2.2 7.9L.4 31.6l8-2.1c2.3 1.3 4.9 1.9 7.6 1.9 8.6 0 15.6-7 15.6-15.6S24.6.4 16 .4zm0 28.3c-2.4 0-4.7-.6-6.7-1.9l-.5-.3-4.8 1.3 1.3-4.7-.3-.5c-1.3-2-2-4.4-2-6.8 0-7.1 5.8-12.9 12.9-12.9S28.9 8.9 28.9 16 23.1 28.7 16 28.7zm7.3-9.7c-.4-.2-2.4-1.2-2.7-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.3 1.6-.2.3-.5.3-.9.1-.4-.2-1.7-.6-3.2-2-1.2-1-2-2.3-2.2-2.7-.2-.4 0-.6.2-.8.2-.2.4-.5.6-.7.2-.2.3-.4.4-.7.1-.3.1-.5 0-.7-.1-.2-.9-2.2-1.2-3-.3-.8-.6-.7-.9-.7h-.7c-.3 0-.7.1-1 .5s-1.3 1.3-1.3 3.1c0 1.8 1.3 3.6 1.5 3.8.2.3 2.6 4 6.3 5.6.9.4 1.6.6 2.1.8.9.3 1.7.2 2.3.1.7-.1 2.4-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.2-.4-.3-.8-.5z"/></svg>
+</a>
+
+<script>
+// Reveal on scroll
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// FAQ accordion
+document.querySelectorAll('.faq-item').forEach(item=>{
+  const q = item.querySelector('.faq-q');
+  const a = item.querySelector('.faq-a');
+  q.addEventListener('click',()=>{
+    const open = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(o=>{
+      o.classList.remove('open');
+      o.querySelector('.faq-a').style.maxHeight = '0px';
+    });
+    if(!open){
+      item.classList.add('open');
+      a.style.maxHeight = a.scrollHeight + 'px';
+    }
+  });
+});
+
+// Smooth nav offset
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',(e)=>{
+    const id = a.getAttribute('href');
+    if(id.length>1){
+      const t = document.querySelector(id);
+      if(t){ e.preventDefault(); window.scrollTo({top:t.offsetTop-80,behavior:'smooth'}); }
+    }
+  });
+});
+</script>
+</body>
+</html>
